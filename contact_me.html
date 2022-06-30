@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7154277eb1.js" crossorigin="anonymous"></script>
+    <title>Portfolio | Contact Me</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 500px;
+            background-color: #fbfbfb;
+            margin: 50px auto;
+            padding: 20px 20px 10px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #111;
+            width: 100%;
+            margin: 50px auto;
+            padding: 20px 20px 10px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+        <div id="sidebar2">
+            <img src="profile.jpg" style="border-radius: 50%; width: 100%;"  alt="">
+            <h2>Anupam Raj</h2>
+            <p>anupamrajrocks@gmail.com</p>
+        </div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html"><i class="fa fa-fw fa-home"></i>&nbsp;&nbsp;Profile</a>
+        <a href="about_me.html"><i class="fa fa-fw fa-user"></i>&nbsp;&nbsp;About Me</a>
+        <a href="education.html"><i class="fa fa-fw fa-school"></i>&nbsp;&nbsp;Education</a>
+        <a href="skill.html"><i class="fa fa-fw fa-laptop-code"></i>&nbsp;&nbsp;Skill</a>
+        <a href="projects.html"><i class="fa fa-fw fa-cubes"></i>&nbsp;&nbsp;Projects</a>
+        <a href="contact_me.html"><i class="fa fa-fw fa-phone"></i>&nbsp;&nbsp;Contact Me</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+
+    </div>
+
+
+    <div class="container">
+        <h2 style="color: white;">Contact Me</h2>
+        <form action="/action_page.php">
+            <label for="fname">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
+            <label for="lname">Email id</label>
+            <input type="text" id="email" name="email" placeholder="Your email id">
+
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="media-icons">
+        <h1 style="text-decoration: underline 2px;">Social Links</h1>
+        <a href="#"><i class="fab fa-github" style="font-size:30px;color:white;"></i></a> &nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-linkedin-in" style="font-size:30px;color:white;"></i></a> &nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-twitter" style="font-size:30px;color:white;"></i></a> &nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fa-solid fa-envelope" style="font-size:30px;color:white;"></i></a> &nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-instagram" style="font-size:30px;color:white;"></i></a>
+     </div>
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>

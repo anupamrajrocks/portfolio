@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7154277eb1.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <title>Portfolio | About me</title>
+    <style type="text/css">
+        .skills-bar {
+            border-radius: 5px;
+            background-color: #111;
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px 20px 10px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+
+        .skills-bar h2 {
+            text-align: center;
+            padding: 0px 0px 25px;
+            margin: 10px 0px 40px;
+            font-size: 30px;
+            font-weight: normal;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .skills-bar label {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .skills-bar label i {
+            font-size: 25px;
+            margin-right: 5px;
+            color: #4caf4f;
+        }
+
+        .bar {
+            height: 10px;
+            background-color: #eee;
+            margin: 15px 0px 30px;
+            border-radius: 10px;
+        }
+
+        .ui-progressbar-value {
+            height: 10px;
+            background-color: green;
+            border-radius: 10px;
+        }
+
+        /*--Responsive CSS--*/
+        @media (max-width: 767px) {
+            .skills-bar {
+                width: 85%;
+            }
+        }
+    </style>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+        <div id="sidebar2">
+            <img src="profile.jpg" style="border-radius: 50%; width: 100%;"  alt="">
+            <h2>Anupam Raj</h2>
+            <p>anupamrajrocks@gmail.com</p>
+        </div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html"><i class="fa fa-fw fa-home"></i>&nbsp;&nbsp;Profile</a>
+        <a href="about_me.html"><i class="fa fa-fw fa-user"></i>&nbsp;&nbsp;About Me</a>
+        <a href="education.html"><i class="fa fa-fw fa-school"></i>&nbsp;&nbsp;Education</a>
+        <a href="skill.html"><i class="fa fa-fw fa-laptop-code"></i>&nbsp;&nbsp;Skill</a>
+        <a href="projects.html"><i class="fa fa-fw fa-cubes"></i>&nbsp;&nbsp;Projects</a>
+        <a href="contact_me.html"><i class="fa fa-fw fa-phone"></i>&nbsp;&nbsp;Contact Me</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+
+    </div>
+
+    <div class="skills-bar">
+        <h2 style="color: white;">My Skills</h2>
+        <label><i class="fa fa-fw fa-code" style="color: white;"></i>&nbsp;&nbsp;HTML</label>
+        <div id="htmlbar" class="bar"></div>
+        <label><i class="fa fa-fw fa-css3" style="color: white;"></i>&nbsp;&nbsp;CSS</label>
+        <div id="cssbar" class="bar"></div>
+        <label><i class="fa-brands fa-js" style="color: white;"></i>&nbsp;&nbsp;JS</label>
+        <div id="jsbar" class="bar"></div>
+        <label><i class="fa-brands fa-python" style="color: white;"></i>&nbsp;&nbsp;Python</label>
+        <div id="pythonbar" class="bar"></div>
+        <label><i class="fa-brands fa-java" style="color: white;"></i>&nbsp;&nbsp;Java</label>
+        <div id="javabar" class="bar"></div>
+        <label><i class="fa-solid fa-pen-nib" style="color: white;"></i>&nbsp;&nbsp;Adobe Illustrator</label>
+        <div id="adobebar" class="bar"></div>
+    </div>
+    <br/>
+    <hr/ style="width: 50%;">
+    <div class="skills-bar">
+        <h2 style="color: white;">My other Skills</h2>
+        <label><i class="fa-solid fa-laptop-file" style="color: white;"></i>&nbsp;&nbsp;Content Development</label>
+        <div id="htmlbar" class="bar"></div>
+        <label><i class="fa-solid fa-file" style="color: white;"></i>&nbsp;&nbsp;Microsoft office</label>
+        <div id="cssbar" class="bar"></div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        $(function () {
+            $("#cssbar").progressbar({
+                value: 67
+            });
+            $("#htmlbar").progressbar({
+                value: 85
+            });
+            $("#jsbar").progressbar({
+                value: 50
+            });
+            $("#pythonbar").progressbar({
+                value: 63
+            });
+            $("#javabar").progressbar({
+                value: 60
+            });
+            $("#adobebar").progressbar({
+                value: 50
+            });
+        });
+    </script>
+</body>
+
+</html>

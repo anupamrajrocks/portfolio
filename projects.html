@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7154277eb1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Projects</title>
+
+    <style>
+        .container-projects {
+            border-radius: 5px;
+            background-color: #111;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px 20px 10px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            font-size: 17px;
+        }
+
+        .container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .container img {
+            vertical-align: middle;
+        }
+
+        .container .content {
+            position:absolute;
+            bottom: 0;
+            text-shadow: 2px 2px black;
+            background: rgb(0, 0, 0);
+            /* Fallback color */
+            background: rgba(0, 0, 0, 0.6);
+            /* Black background with 0.5 opacity */
+            color: #f1f1f1;
+            width: 350px;
+            height: 170px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+        <div id="sidebar2">
+            <img src="profile.jpg" style="border-radius: 50%; width: 100%;"  alt="">
+            <h2>Anupam Raj</h2>
+            <p>anupamrajrocks@gmail.com</p>
+        </div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html"><i class="fa fa-fw fa-home"></i>&nbsp;&nbsp;Profile</a>
+        <a href="about_me.html"><i class="fa fa-fw fa-user"></i>&nbsp;&nbsp;About Me</a>
+        <a href="education.html"><i class="fa fa-fw fa-school"></i>&nbsp;&nbsp;Education</a>
+        <a href="skill.html"><i class="fa fa-fw fa-laptop-code"></i>&nbsp;&nbsp;Skill</a>
+        <a href="projects.html"><i class="fa fa-fw fa-cubes"></i>&nbsp;&nbsp;Projects</a>
+        <a href="contact_me.html"><i class="fa fa-fw fa-phone"></i>&nbsp;&nbsp;Contact Me</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+
+    </div>
+
+    <div class="container-projects">
+
+        <h2 style="color: white;"><i class="fa fa-fw fa-cubes"></i> My Projects</h2>
+
+        <div class="container">
+            <img src="logo(bpscnext).jpg" alt="Notebook" style="width:350px;">
+            <div class="content">
+              <h1>Logo Designing</h1>
+              <p>I have designed this logo for an education platform named as BPSCNEXT</p>
+            </div>
+          </div>
+          <hr/>
+          <br/>
+          <br/>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>
